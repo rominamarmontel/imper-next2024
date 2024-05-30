@@ -65,7 +65,7 @@ const OneFilm = ({
         </div>
         <div className="xl:w-1/3">
           {title && (
-            <div className="flex flex-col items-left text-2xl mt-5">
+            <div className="flex flex-col items-left text-2xl mt-0">
               <strong>{title.fr}</strong>
             </div>
           )}

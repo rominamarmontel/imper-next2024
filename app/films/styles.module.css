@@ -2,7 +2,18 @@
 .Fade {
   animation: fadein 1s forwards;
 }
-
+.NewsTitle {
+  font-family: 'adobe-garamond-pro', serif;
+  font-size: 32px;
+  color: #333333;
+  line-height: 32px;
+  margin-bottom: 50px;
+  text-align: right;
+  letter-spacing: 1.6pt;
+  font-style: normal;
+  font-weight: 400;
+  padding-bottom: 26px;
+}
 @keyframes fadein {
   0% {
     opacity: 0;

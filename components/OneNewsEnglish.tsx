@@ -25,11 +25,21 @@ const OneNewsEnglish = ({
   const formattedDate = dateObject.toLocaleDateString('fr-FR', options)
   return (
     <>
-      <div className="lg:max-w-[900px] lg:px-16 mx-auto py-8 shadow-xl min-h-screen flex flex-col px-8">
-        <div>
-          <div className={`mb-5 ${styles.PostTitle}`}>{postTitle}</div>
+      <div className="lg:px-16 mx-auto flex flex-col">
+        <div className="text-2xl text-left">
+          <strong>{postTitle}</strong>
         </div>
-        <div style={{ position: 'relative' }} className="w-full aspect-video">
+        <div className="text-xs textp flex items-baseline gap-5 textp">
+          <div>
+            <span>posted @ </span>
+            {formattedDate}
+          </div>
+          <ShareSns _id={_id} />
+        </div>
+        <div
+          style={{ position: 'relative' }}
+          className="w-2/3 aspect-video my-10"
+        >
           {imageUrl && (
             <Image
               src={imageUrl}
@@ -41,14 +51,7 @@ const OneNewsEnglish = ({
             />
           )}
         </div>
-        <div className="textp my-10">{post}</div>
-        <div className="textSm flex justify-end items-baseline gap-5">
-          <div>
-            <span>posted @ </span>
-            {formattedDate}
-          </div>
-          <ShareSns _id={_id} />
-        </div>
+        <div className="text-sm post-content">{post}</div>
       </div>
     </>
   )

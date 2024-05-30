@@ -42,13 +42,19 @@ const News = ({ _id, postTitle, post, imageUrl, updatedAt }: TNews) => {
         </div>
         <div className="w-1/2 flex flex-col justify-between">
           <div>
-            {postTitle && <div className={styles.NewsTitle}>{postTitle}</div>}
+            {postTitle && (
+              <div className="text-2xl">
+                <strong>{postTitle}</strong>
+              </div>
+            )}
             {post && (
-              <div className="text-base font-light line-clamp-2">{post}</div>
+              <div className="text-sm font-light line-clamp-2 textp">
+                {post}
+              </div>
             )}
             <Link
               href={`${process.env.NEXTAUTH_URL}/films/news/${_id}`}
-              className="underline text-gray-400"
+              className="text-sm text-gray-400"
             >
               Voir plus
             </Link>

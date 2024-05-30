@@ -222,11 +222,11 @@
   text-align: center;
 }
 /************************************** News *******************************************/
-.NewsTitle {
+/* .NewsTitle {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 1.5rem;
-}
+} */
 .PostTitle {
   font-family: 'Playfair Display', serif;
   font-style: italic;
