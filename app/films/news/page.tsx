@@ -25,7 +25,7 @@ export default async function getNews() {
       <div
         className={`${styles.Fade} md:flex flex-wrap justify-between gap-auto w-11/12`}
       >
-        <h1 className={styles.NewsTitle}>Infomation</h1>
+        <h1 className={styles.NewsTitle}>actualités</h1>
         <div className="md:flex flex-wrap gap-auto">
           {posts && posts.length > 0 ? (
             posts.map((post: TNews) => (

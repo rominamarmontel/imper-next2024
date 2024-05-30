@@ -1,5 +1,5 @@
 'use client'
-import Image from 'next/image'
+
 import styles from './styles.module.css'
 import { useState } from 'react'
 
@@ -8,10 +8,10 @@ const AboutPage = () => {
   const toggleLanguage = () => {
     setIsEnglish(!isEnglish)
   }
-  const imageUrl =
-    'https://res.cloudinary.com/dyu65fpse/image/upload/v1699955860/nextImpermanence_images/ucj4ftamymb1towotolo.jpg'
+
   return (
     <div className="md:w-[50%]">
+      <p className={styles.AboutTitle}>impermanence films</p>
       <p className={styles.AboutText}>
         Basée à Paris depuis 2011,
         <br />
