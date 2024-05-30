@@ -8,7 +8,7 @@ const getAllNews = async (): Promise<TNews[] | null> => {
       cache: 'no-store',
     })
     if (res.ok) {
-      const news = res.json()
+      const news = await res.json()
       return news
     }
   } catch (error) {

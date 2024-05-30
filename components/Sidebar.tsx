@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { signOut } from 'next-auth/react'
+import Image from 'next/image'
 
 const Sidebar = () => {
   return (
@@ -8,7 +9,13 @@ const Sidebar = () => {
         <div className="sidebar_header">
           <div className="sidebar_header-logo">
             <Link href={'/'} target={'_blank'}>
-              <img src="/images/impermanence_white.png" width={150} />
+              <Image
+                src="/images/impermanence_white.png"
+                alt="Logo Impermanence"
+                width={150}
+                height={100}
+              />
+              {/* <img src="/images/impermanence_white.png" width={150} /> */}
             </Link>
           </div>
           <div className="sidebar_header-logo-barcode">

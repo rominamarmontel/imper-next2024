@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { signIn } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { toast } from 'react-hot-toast'
+import Image from 'next/image'
 
 const LoginForm = () => {
   const [email, setEmail] = useState('')
@@ -66,7 +67,13 @@ const LoginForm = () => {
         </form>
         <div className="flex justify-center">
           <Link href={'/'}>
-            <img src="/images/logo_impermanence.png" width={100} />
+            <Image
+              src="/images/logo_impermanence.png"
+              alt="Logo Impermanence"
+              width={100}
+              height={100}
+            />
+            {/* <img src="/images/logo_impermanence.png" width={100} /> */}
           </Link>
         </div>
       </div>
