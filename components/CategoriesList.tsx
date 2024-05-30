@@ -7,6 +7,21 @@ import { useLanguage } from '@/app/LanguageContext'
 const CategoriesList = () => {
   const [categories, setCategories] = useState<TCategory[] | null>(null)
   const { isEnglish } = useLanguage()
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -33,7 +48,9 @@ const CategoriesList = () => {
         categories.map((category) => (
           <div
             key={category._id}
-            className={styles.CategoriesList_CategoryName}
+            className={`${styles.CategoriesList_CategoryName} ${
+              scrolled ? styles.scrolledText : ''
+            }`}
           >
             <Link
               href={

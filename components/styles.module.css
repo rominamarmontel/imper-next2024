@@ -18,7 +18,7 @@
   right: 0;
   z-index: 2;
   background-color: #ffffff;
-  height: 140px;
+  height: 120px;
   padding-left: 40px;
   padding-right: 40px;
   padding-top: 20px;
@@ -31,25 +31,23 @@
   line-height: 40px;
   font-weight: 600;
 }
-
-.Navbar--scroll {
+.Navbar.bgblack {
   background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0, 0));
   opacity: 1;
+  transition: background-color 0.3s ease;
 }
-.ScrollNavbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
+.scrollNavbarTitle {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
-  transition: opacity 0.5s ease-in-out;
-  z-index: 3;
+  font-size: 32px;
+  font-family: 'Charm', cursive;
+  text-align: center;
+  line-height: 40px;
+  font-weight: 600;
+  color: #ffffff;
 }
-
+.scrolledText {
+  color: white !important;
+}
 .Footer {
   font-family: 'Playfair Display', serif;
   padding-top: 16px;
@@ -98,11 +96,11 @@
 }
 .CategoriesList_CategoryName a::after,
 .About a::after {
-  background-color: #c03a2b;
-  bottom: -3px;
+  background-color: #000000;
+  /* bottom: -0.5px; */
   content: '';
   display: block;
-  height: 2.5px;
+  height: 1px;
   left: 0;
   position: absolute;
   transition: 0.5s all;

@@ -158,7 +158,7 @@ const HambergerMenu: FC<HambergerProps> = ({ open, id, close }) => {
             </li>
             <li>
               <Link
-                href={isEnglish ? '/films/en/contact' : '/films/contact'}
+                href={`mailto:impermanencefilms@gmail.com`}
                 onClick={handleClick}
               >
                 contact
