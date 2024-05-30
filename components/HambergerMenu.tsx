@@ -49,7 +49,7 @@ const HambergerMenu: FC<HambergerProps> = ({ open, id, close }) => {
           <ul className={styles.MenuOpen}>
             <li>
               <Link href={'/films/news'} onClick={handleClick}>
-                news
+                {isEnglish ? 'news' : 'actualités'}
               </Link>
             </li>
             <li>
@@ -105,7 +105,7 @@ const HambergerMenu: FC<HambergerProps> = ({ open, id, close }) => {
                       }
                       onClick={handleClick}
                     >
-                      {isEnglish ? 'en cours' : 'in progress'}
+                      {isEnglish ? 'in progress' : 'en cours'}
                     </Link>
                   </li>
                   <li>
@@ -153,7 +153,7 @@ const HambergerMenu: FC<HambergerProps> = ({ open, id, close }) => {
                 href={isEnglish ? '/films/en/about' : '/films/about'}
                 onClick={handleClick}
               >
-                {isEnglish ? 'à propos' : 'about'}
+                {isEnglish ? 'about' : 'à propos'}
               </Link>
             </li>
             <li>

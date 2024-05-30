@@ -1,7 +1,6 @@
 .font-h1 {
   font-family: 'Playfair Display', serif;
 }
-
 .Zoom {
   transition: 1s;
 }
@@ -31,6 +30,24 @@
   text-align: center;
   line-height: 40px;
   font-weight: 600;
+}
+
+.Navbar--scroll {
+  background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0, 0));
+  opacity: 1;
+}
+.ScrollNavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: opacity 0.5s ease-in-out;
+  z-index: 3;
 }
 
 .Footer {
