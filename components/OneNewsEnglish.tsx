@@ -23,35 +23,41 @@ const OneNewsEnglish = ({
     year: 'numeric',
   }
   const formattedDate = dateObject.toLocaleDateString('fr-FR', options)
+
   return (
     <>
-      <div className="lg:px-16 mx-auto flex flex-col">
-        <div className="text-2xl text-left">
-          <strong>{postTitle}</strong>
-        </div>
-        <div className="text-xs textp flex items-baseline gap-5 textp">
-          <div>
-            <span>posted @ </span>
-            {formattedDate}
+      <div className="w-full h-full px-10">
+        <div className="xl:flex-col">
+          <div
+            style={{ position: 'relative' }}
+            className="xl:w-2/3 md:w-full relative text-2xl"
+          >
+            <strong>{postTitle}</strong>
           </div>
-          <ShareSns _id={_id} />
+          <div className="text-xs textp flex items-baseline gap-5 textp">
+            <div>
+              <span>posted @ </span>
+              {formattedDate}
+            </div>
+            <ShareSns _id={_id} />
+          </div>
+          <div
+            style={{ position: 'relative' }}
+            className="xl:w-2/3 aspect-video my-10"
+          >
+            {imageUrl && (
+              <Image
+                src={imageUrl}
+                alt={postTitle}
+                fill
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, 1200px"
+                className="object-cover object-center"
+                priority
+              />
+            )}
+          </div>
+          <div className="text-sm post-content">{post}</div>
         </div>
-        <div
-          style={{ position: 'relative' }}
-          className="w-2/3 aspect-video my-10"
-        >
-          {imageUrl && (
-            <Image
-              src={imageUrl}
-              alt={postTitle}
-              fill
-              sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, 1200px"
-              className="object-cover object-center"
-              priority
-            />
-          )}
-        </div>
-        <div className="text-sm post-content">{post}</div>
       </div>
     </>
   )

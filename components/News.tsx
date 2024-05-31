@@ -19,11 +19,11 @@ const News = ({ _id, postTitle, post, imageUrl, updatedAt }: TNews) => {
   const formattedDate = dateObject.toLocaleDateString('fr-FR', options)
 
   return (
-    <div className="w-full py-10">
-      <div className="flex gap-20">
+    <div className="w-full h-auto py-10">
+      <div className="xl:flex gap-12">
         <div
           style={{ position: 'relative' }}
-          className="w-1/2 aspect-video overflow-hidden"
+          className="xl:w-2/3 md:w-full md:mb-10 aspect-video relative"
         >
           {imageUrl && (
             <Link href={`${process.env.NEXTAUTH_URL}/films/news/${_id}`}>
@@ -33,14 +33,14 @@ const News = ({ _id, postTitle, post, imageUrl, updatedAt }: TNews) => {
                   alt={postTitle}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, 1200px"
-                  className={`${styles.Zoom} object-cover object-center`}
+                  className="object-cover object-center"
                   priority
                 />
               </div>
             </Link>
           )}
         </div>
-        <div className="w-1/2 flex flex-col justify-between">
+        <div className="md:w-full md:mb-10 flex flex-col justify-between">
           <div>
             {postTitle && (
               <div className="text-2xl">
