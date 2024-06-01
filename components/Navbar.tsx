@@ -3,10 +3,10 @@
 import Link from 'next/link'
 import { useSession, signOut } from 'next-auth/react'
 import styles from './styles.module.css'
-import Image from 'next/image'
+// import Image from 'next/image'
 import { useEffect, useRef, useState } from 'react'
 import CategoriesList from './CategoriesList'
-import imageAccount from '@/public/images/computer-icons-google-account-icon-design-login-png-favpng-jFjxPac6saRuDE3LiyqsYTEZM.jpg'
+// import imageAccount from '@/public/images/computer-icons-google-account-icon-design-login-png-favpng-jFjxPac6saRuDE3LiyqsYTEZM.jpg'
 import HambergerMenu from './HambergerMenu'
 import './Navbar.css'
 import { FaVimeo, FaLinkedinIn } from 'react-icons/fa'
@@ -264,7 +264,7 @@ const Navbar = () => {
                         onClick={handleLanguageChange}
                         className="second-btn"
                       >
-                        {isEnglish ? ' FR' : 'EN'}
+                        {isEnglish ? 'FR' : 'EN'}
                       </button>
                     </li>
                   </ul>
