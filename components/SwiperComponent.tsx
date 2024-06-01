@@ -79,7 +79,7 @@ const SwiperComponent: React.FC<DemoSliderProps> = ({ data }) => {
                     </p>
                   )}
                   <div className="sns-container">
-                    <ul style={{ display: 'flex' }}>
+                    <ul style={{ display: 'flex' }} className="items-center">
                       <Link
                         href="https://vimeo.com/user9555000"
                         target="_blank"
