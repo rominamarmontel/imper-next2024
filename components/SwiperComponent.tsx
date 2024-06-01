@@ -125,10 +125,16 @@ const SwiperComponent: React.FC<DemoSliderProps> = ({ data }) => {
                     <>
                       <ul>
                         <li>
-                          <Link href="/films/en">ALL FILMS</Link>
+                          <Link href={`${process.env.NEXTAUTH_URL}/films/en`}>
+                            ALL FILMS
+                          </Link>
                         </li>
                         <li>
-                          <Link href="/flims/en/about">ABOUT MPERMANENCE</Link>
+                          <Link
+                            href={`${process.env.NEXTAUTH_URL}/films/en/about`}
+                          >
+                            ABOUT MPERMANENCE
+                          </Link>
                         </li>
                       </ul>
                     </>
