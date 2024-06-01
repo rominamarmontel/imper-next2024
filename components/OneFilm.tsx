@@ -3,6 +3,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import styles from './styles.module.css'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, EffectFade, Autoplay } from 'swiper/modules'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/effect-fade'
 
 const OneFilm = ({
   _id,
@@ -45,7 +50,7 @@ const OneFilm = ({
           style={{ position: 'relative' }}
           className="xl:w-2/3 md:w-full aspect-video relative"
         >
-          {imageData && imageData.length > 0 ? (
+          {imageData && imageData.length === 1 ? (
             <Image
               src={imageData[0].url}
               alt={originalTitle}
@@ -54,6 +59,30 @@ const OneFilm = ({
               className="object-cover object-center"
               priority
             />
+          ) : imageData && imageData.length > 1 ? (
+            <Swiper
+              zoom={true}
+              navigation={false}
+              effect={'fade'}
+              speed={2000}
+              autoplay={{ delay: 4000, disableOnInteraction: false }}
+              loop={true}
+              modules={[Pagination, Autoplay, EffectFade]}
+              className="w-full h-full"
+            >
+              {imageData.map((image, index) => (
+                <SwiperSlide key={index}>
+                  <Image
+                    src={image.url}
+                    alt={`${originalTitle}-${index}`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, 1200px"
+                    className="object-cover object-center"
+                    priority
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
           ) : (
             <div>Loading...</div>
           )}
