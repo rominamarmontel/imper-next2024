@@ -5,6 +5,21 @@ import { TCategory, TFilm } from '@/types'
 import { useEffect, useState } from 'react'
 import styles from '../../styles.module.css'
 
+// SEO対策で表示する為のもの（未解決 )
+// export const generateMetadata = async ({
+//   params,
+// }: {
+//   params: { id: string }
+// }) => {
+//   const { film } = params
+//   const oneFilm = await getFilm(film)
+
+//   return {
+//     title: film.title,
+//     description: film.synopsis,
+//   }
+// }
+
 const getCategory = async (): Promise<TCategory[] | null> => {
   try {
     const resCat = await fetch(`${process.env.NEXTAUTH_URL}/api/categories`, {

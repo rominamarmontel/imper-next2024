@@ -236,7 +236,7 @@ const Navbar = () => {
                         className={`${styles.About} ${
                           scrolled ? styles.scrolledText : ''
                         }`}
-                        href={`mailto:impermanencefilms@gmail.com`}
+                        href={`mailto:contact@impermanencefilms.org`}
                       >
                         contact
                       </Link>
